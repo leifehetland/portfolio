@@ -1,0 +1,81 @@
+export const meta = {
+  // DRAFT copy, written in Leif's voice from the design doc and brief. Replace
+  // metrics and any claims before launch. The live rebuild is not deployed yet.
+  slug: "videodrome",
+  index: 1,
+  title: "Videodrome",
+  year: "2026",
+  kind: "Web platform",
+  summary:
+    "A web presence and inventory rebuild for a beloved Atlanta video store, with a real engineering story underneath: migrating a legacy desktop database into a modern, searchable catalog.",
+  role: ["Architecture", "Full-stack", "Design system"],
+  stack: ["TypeScript", "Next.js", "PostgreSQL", "Tailwind CSS"],
+  status: "In development",
+  media: [
+    {
+      type: "image",
+      src: "/work/videodrome/hero.webp",
+      alt: "Videodrome storefront hero: the white goggles logo over a TV-static background, with the tagline Atlanta's Video Store.",
+      w: 1600,
+      h: 883,
+    },
+    {
+      type: "image",
+      src: "/work/videodrome/collection.webp",
+      alt: "The searchable collection: a filterable grid of film cards showing poster, director, year, and live availability badges.",
+      w: 1600,
+      h: 883,
+    },
+    {
+      type: "image",
+      src: "/work/videodrome/full.webp",
+      alt: "Full storefront page from hero through the collection grid.",
+      w: 1400,
+      h: 1841,
+    },
+  ],
+  context: [
+    "Client: Videodrome, Atlanta",
+    "1023 N Highland Ave NE",
+    "Independent engagement",
+  ],
+  outcomes: [
+    "~30,000 titles modeled",
+    "Legacy Clarion data to PostgreSQL",
+    "Catalog, inventory, and POS unified",
+    "Editorial dark design system",
+  ],
+};
+
+## The brief
+
+Videodrome is a physical video store in Atlanta with a catalog most streaming
+services cannot match: roughly thirty thousand titles, curated and organized by
+director and country rather than by algorithm. The job was to give that catalog a
+web presence worthy of the shelves, and to make the inventory behind it something
+the staff could actually run.
+
+## The hard part
+
+The existing data lived in a legacy Clarion desktop database: a closed, decades-old
+system that was never meant to talk to the web. The real work was not the storefront,
+it was getting thirty thousand records out of that system without losing the
+hand-built organization that makes the store what it is, then modeling them in
+PostgreSQL in a way that supports search by title, director, and country, plus live
+rental availability.
+
+## The build
+
+The front end is a TypeScript and Next.js storefront over that Postgres catalog: a
+fast search, filters for availability and genre, and film cards that show poster,
+director, year, and how many copies are left. The same data model feeds the
+point-of-sale and inventory side, so what a customer sees online and what the staff
+sees at the counter come from one source of truth rather than two systems drifting
+apart. The look is deliberately editorial and dark, built on a small design system
+so new sections stay consistent as the catalog grows.
+
+## Where it stands
+
+The design and data model are built and the rebuild is in development, not yet live
+on the store's domain. The screens here are from the working design. Next up is
+finishing the migration tooling and the staff-facing inventory views before launch.

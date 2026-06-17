@@ -32,6 +32,20 @@ Do not pin versions from memory. Before installing, check the current stable rel
 of Next, Tailwind, and motion and use that. Note the resolved versions back into this
 file once installed.
 
+### Resolved versions (Milestone 0, 2026-06-17)
+
+- next 16.2.9 (App Router, Turbopack default, React Compiler available)
+- react / react-dom 19.2.4
+- tailwindcss 4.3.1 (CSS-first, tokens live in `@theme` in `globals.css`, no JS config)
+- motion 12.40.x (import from `motion/react`)
+- typescript 5.9.x (strict), eslint 9 + eslint-config-next 16.2.9, prettier 3
+- Fonts are self-hosted via `next/font/local`, not `next/font/google`: the OFL variable
+  woff2 builds of Fraunces (display) and Hanken Grotesk (body) are vendored under
+  `src/app/fonts/` with their license text. This avoids any build-time or runtime
+  dependency on a font CDN. Both font faces are a DRAFT choice pending sign-off.
+- MDX pipeline is deferred to Milestone 1, where the first real project consumes it.
+- Package manager: pnpm. `pnpm-workspace.yaml` allowlists sharp + unrs-resolver builds.
+
 ## Commands
 
 These are the intended scripts. Create them in `package.json` during setup, then keep

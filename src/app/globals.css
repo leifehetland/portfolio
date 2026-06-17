@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/*
+  Token layer: the single source of truth for color, type, spacing, and motion.
+  Values map directly to docs/02-design-system.md. No magic numbers downstream;
+  components reference these tokens (via Tailwind utilities or var()), never raw values.
+*/
+
+@theme {
+  /* Color (docs/02 color tokens) */
+  --color-ink: #0a0a0a; /* hero and intro pages, near-black */
+  --color-ink-soft: #141414; /* secondary dark panels */
+  --color-paper: #ffffff; /* detail pages */
+  --color-frame: #e8e8e8; /* light rounded media-frame border */
+
+  --color-fg-on-ink: rgba(255, 255, 255, 0.92);
+  --color-fg-on-paper: #141414;
+  --color-fg-muted: #6b6b6b; /* captions, secondary metadata */
+
+  /* Accent: ONE deliberate color, used only on focus, links, one signature moment.
+     Placeholder (restrained editor-theme teal). Swap this single value later. */
+  --color-accent: #4fb6ad;
+
+  /* Type families (bound to next/font CSS variables in layout.tsx) */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans:
+    var(--font-hanken), ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Fluid type scale (docs/02 type scale). text-* tokens generate Tailwind utilities. */
+  --text-display-xl: clamp(5rem, 18vw, 18rem); /* project numbers */
+  --text-display-xl--line-height: 0.85;
+  --text-display-l: clamp(2.5rem, 9vw, 9rem); /* project titles */
+  --text-display-l--line-height: 0.92;
+  --text-heading: clamp(1.75rem, 4vw, 2.8rem); /* detail page titles */
+  --text-heading--line-height: 1.05;
+  --text-label: 0.75rem; /* "Selected work", section headers */
+  --text-label--line-height: 1.1;
+  --text-utility: 0.7rem; /* metadata: role, client, year */
+  --text-utility--line-height: 1.2;
+  --text-body: 1.0625rem; /* project descriptions */
+  --text-body--line-height: 1.6;
+
+  /* Tracking (letter-spacing) roles */
+  --tracking-label: -0.028em; /* heavy negative tracking for labels */
+  --tracking-utility: 0.08em; /* tracked-out uppercase utility */
+
+  /* Motion (docs/02 motion). Durations and easings as tokens. */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-carousel: cubic-bezier(0.4, 0.24, 0.4, 1);
+  --duration-reveal: 500ms;
+  --duration-carousel: 520ms;
+}
+
+/* Reveal distance and stagger as plain custom props (consumed by motion components) */
+:root {
+  --reveal-y: 16px;
+  --reveal-stagger: 90ms;
+}
+
+/* Base document */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg-on-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Global visible focus ring on every interactive element, using the accent token */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Respect prefers-reduced-motion: drop transforms/animation, kill smooth scroll.
+   Components also branch on this in JS via the motion library's useReducedMotion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
