@@ -12,9 +12,9 @@ type ProjectDetailProps = {
 };
 
 /*
-  The white detail page for a project (docs/04). A heading title, the media carousel,
-  then a two-column editorial layout: the MDX narrative beside a column of context,
-  outcomes, and links. Reused by the home pager and the /work/[slug] route.
+  The white detail page for a project (docs/04 + reference). A centered techno heading,
+  the media frame, then the monospace narrative beside a column of context, outcomes,
+  and links. Monochrome. Reused by the home pager and the /work/[slug] route.
 */
 export function ProjectDetail({
   project,
@@ -27,29 +27,29 @@ export function ProjectDetail({
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p
-            className="text-utility text-(--color-fg-muted) uppercase"
+            className="text-utility text-center text-(--color-fg-muted) uppercase"
             style={{ letterSpacing: "var(--tracking-utility)" }}
           >
-            {project.kind} , {project.year}
-            {project.status ? ` , ${project.status}` : ""}
+            {project.kind}, {project.year}
+            {project.status ? `, ${project.status}` : ""}
           </p>
         </Reveal>
 
         <Reveal delay={0.05}>
-          <Title className="text-heading font-display mt-3 max-w-3xl font-medium tracking-tight text-(--color-fg-on-paper)">
+          <Title className="text-heading font-display mx-auto mt-3 max-w-4xl text-center font-extrabold tracking-tight text-(--color-fg-on-paper) uppercase">
             {project.title.replace(/\n/g, " ")}
           </Title>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="text-body mt-6 max-w-2xl text-(--color-fg-on-paper)/80">
+          <p className="text-body mx-auto mt-6 max-w-2xl text-center text-(--color-fg-on-paper)/80">
             {project.summary}
           </p>
         </Reveal>
 
         {project.media.length > 0 && (
           <Reveal delay={0.1}>
-            <div className="mt-12">
+            <div className="mx-auto mt-12 max-w-4xl">
               <MediaCarousel
                 items={project.media}
                 label={`${project.title.replace(/\n/g, " ")} media`}
@@ -58,9 +58,9 @@ export function ProjectDetail({
           </Reveal>
         )}
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_18rem]">
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_16rem]">
           <Reveal className="max-w-prose">
-            <div className="font-sans">
+            <div className="text-justify hyphens-auto">
               <Body />
             </div>
           </Reveal>

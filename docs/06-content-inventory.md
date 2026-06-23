@@ -47,7 +47,7 @@ are both senior signals.
 **5. Punchy Fox and game-jam work** (has footage)
 Discipline: game-dev + engineering + creative. Showable: yes (his and jam-team work, quick ok
 from Tyler). Angle: the origin story. Punchy Fox (hiatused, with rough demo footage and early
-prototype videos), plus jam pieces "Is Anyone Out There?" (did well at its jam) and "La Bamba"
+prototype videos), plus jam pieces "Is Anyone Out There?" (did well at its jam) and "La Bomba"
 (a Bomberman-style clone that reached a playable prototype). Either one combined "games" case
 study or the bridge from the work sequence into the lab.
 

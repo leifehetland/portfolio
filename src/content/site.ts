@@ -4,6 +4,24 @@
   audience-appropriate (no Behance/Instagram). Edit here, not in the components.
 */
 
+// Canonical origin for metadata, OG images, sitemap, and JSON-LD. Override via
+// NEXT_PUBLIC_SITE_URL in the environment. DRAFT default: confirm the exact domain
+// (leifhetland vs leifehetland) before launch.
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://leifhetland.com"
+).replace(/\/$/, "");
+
+export const person = {
+  name: "Leif Hetland",
+  role: "Senior full-stack engineer",
+  locality: "Atlanta, Georgia",
+  email: "lehetland1@gmail.com",
+  // DRAFT: replace with real profile URLs before launch (also used as JSON-LD sameAs).
+  sameAs: [] as string[],
+  tagline:
+    "Senior full-stack TypeScript engineer. Architecture, full-stack delivery, and the systems behind them.",
+};
+
 export type CapabilityGroup = { label: string; items: string[] };
 
 export const capabilities: CapabilityGroup[] = [

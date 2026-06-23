@@ -79,7 +79,7 @@ export function Pager({ children }: PagerProps) {
               key={i}
               className={`size-1.5 rounded-full transition-opacity duration-300 ${
                 i === active
-                  ? "bg-(--color-accent) opacity-100"
+                  ? "bg-current opacity-100"
                   : "bg-current opacity-30"
               }`}
             />

@@ -1,14 +1,15 @@
 /*
-  Small personal mark, top center (docs/04). The reference's "Y78" slot becomes
-  Leif's "LH". DRAFT: a typeset monogram until a real mark is supplied.
+  Small personal mark, top center (docs/04). The reference's stacked "Y78" becomes
+  Leif's stacked "LH". DRAFT: a typeset monogram until a real mark is supplied.
 */
 export function Monogram() {
   return (
     <span
-      className="font-display text-lg leading-none font-semibold tracking-tight text-(--color-fg-on-ink)"
+      className="font-display flex flex-col items-center text-sm leading-[0.95] font-extrabold tracking-tight text-(--color-fg-on-ink)"
       aria-label="Leif Hetland"
     >
-      LH
+      <span aria-hidden>L</span>
+      <span aria-hidden>H</span>
     </span>
   );
 }

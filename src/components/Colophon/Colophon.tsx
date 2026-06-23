@@ -8,7 +8,7 @@ function ContactLink({ label, href }: { label: string; href: string }) {
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className="text-heading font-display text-(--color-fg-on-ink) decoration-(--color-accent) decoration-2 underline-offset-8 hover:underline"
+      className="text-heading font-display text-(--color-fg-on-ink) decoration-current decoration-2 underline-offset-8 hover:underline"
     >
       {label}
     </a>

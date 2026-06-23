@@ -32,7 +32,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: ({ href, children }) => (
       <a
         href={href}
-        className="text-(--color-fg-on-paper) underline decoration-(--color-accent) decoration-2 underline-offset-4"
+        className="text-(--color-fg-on-paper) underline decoration-current decoration-2 underline-offset-4"
       >
         {children}
       </a>

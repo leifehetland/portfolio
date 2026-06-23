@@ -21,10 +21,22 @@ export async function generateMetadata({
   if (!project) return {};
 
   const name = project.title.replace(/\n/g, " ");
+  const title = `${name}, ${project.kind}`;
   return {
-    title: `${name}, ${project.kind} by Leif Hetland`,
+    title,
     description: project.summary,
     alternates: { canonical: `/work/${project.slug}` },
+    openGraph: {
+      type: "article",
+      title,
+      description: project.summary,
+      url: `/work/${project.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: project.summary,
+    },
   };
 }
 

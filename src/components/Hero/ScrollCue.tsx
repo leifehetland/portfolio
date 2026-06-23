@@ -34,7 +34,7 @@ export function ScrollCue() {
       </span>
       <span className="relative block h-12 w-px overflow-hidden bg-white/15">
         <motion.span
-          className="absolute inset-x-0 top-0 block h-4 bg-(--color-accent)"
+          className="absolute inset-x-0 top-0 block h-4 bg-white/70"
           initial={{ y: -16 }}
           animate={reduced ? { y: 0 } : { y: 48 }}
           transition={

@@ -17,14 +17,16 @@
   --color-fg-on-paper: #141414;
   --color-fg-muted: #6b6b6b; /* captions, secondary metadata */
 
-  /* Accent: ONE deliberate color, used only on focus, links, one signature moment.
-     Placeholder (restrained editor-theme teal). Swap this single value later. */
-  --color-accent: #4fb6ad;
+  /* Monochrome chrome (reference is white on near-black, no accent). Kept as a
+     token for any single future signature moment; chrome uses currentColor. */
+  --color-accent: #ffffff;
 
-  /* Type families (bound to next/font CSS variables in layout.tsx) */
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-sans:
-    var(--font-hanken), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  /* Type families (bound to next/font CSS variables in layout.tsx).
+     Techno + monospace: heavy grotesque titles, geometric numerals, mono body. */
+  --font-display: var(--font-archivo), system-ui, sans-serif;
+  --font-numeral: var(--font-orbitron), var(--font-archivo), sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-sans: var(--font-jetbrains), ui-monospace, monospace;
 
   /* Fluid type scale (docs/02 type scale). text-* tokens generate Tailwind utilities. */
   --text-display-xl: clamp(5rem, 18vw, 18rem); /* project numbers */
@@ -66,14 +68,15 @@ html {
 body {
   background: var(--color-ink);
   color: var(--color-fg-on-ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-/* Global visible focus ring on every interactive element, using the accent token */
+/* Global visible focus ring on every interactive element. Uses currentColor so it
+   stays monochrome and visible on both ink and paper surfaces. */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid currentColor;
   outline-offset: 3px;
   border-radius: 2px;
 }

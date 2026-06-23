@@ -26,12 +26,12 @@ export function LinkRow({ links }: LinkRowProps) {
               {...(external
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              className="text-label inline-flex items-center gap-1.5 font-bold text-(--color-fg-on-paper) decoration-(--color-accent) decoration-2 underline-offset-4 hover:underline"
+              className="text-label inline-flex items-center gap-1.5 font-bold text-(--color-fg-on-paper) decoration-current decoration-2 underline-offset-4 hover:underline"
               style={{ letterSpacing: "var(--tracking-label)" }}
             >
               {link.label}
               {external && (
-                <span aria-hidden className="text-(--color-accent)">
+                <span aria-hidden className="opacity-60">
                   ↗
                 </span>
               )}

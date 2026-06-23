@@ -141,7 +141,7 @@ export function MediaCarousel({ items, label }: MediaCarouselProps) {
               type="button"
               onClick={() => paginate(-1)}
               aria-label="Previous slide"
-              className="flex size-10 items-center justify-center rounded-full border border-(--color-fg-on-paper)/15 text-(--color-fg-on-paper) transition-colors hover:border-(--color-accent) hover:text-(--color-accent)"
+              className="flex size-10 items-center justify-center rounded-full border border-(--color-fg-on-paper)/15 text-(--color-fg-on-paper) transition-colors hover:border-(--color-fg-on-paper)"
             >
               <span aria-hidden>←</span>
             </button>
@@ -149,7 +149,7 @@ export function MediaCarousel({ items, label }: MediaCarouselProps) {
               type="button"
               onClick={() => paginate(1)}
               aria-label="Next slide"
-              className="flex size-10 items-center justify-center rounded-full border border-(--color-fg-on-paper)/15 text-(--color-fg-on-paper) transition-colors hover:border-(--color-accent) hover:text-(--color-accent)"
+              className="flex size-10 items-center justify-center rounded-full border border-(--color-fg-on-paper)/15 text-(--color-fg-on-paper) transition-colors hover:border-(--color-fg-on-paper)"
             >
               <span aria-hidden>→</span>
             </button>
