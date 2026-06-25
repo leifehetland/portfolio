@@ -1,3 +1,4 @@
+import { HeroBackground } from "./HeroBackground";
 import { KineticHeadline } from "./KineticHeadline";
 import { Monogram } from "./Monogram";
 import { ScrollCue } from "./ScrollCue";
@@ -5,11 +6,11 @@ import { ScrollCue } from "./ScrollCue";
 // DRAFT opening statement in Leif's voice (docs/04), assembled line by line as a
 // centered monospace cold-open echoing the reference hero.
 const HEADLINE_SEGMENTS = [
-  "Senior full-stack engineer",
-  "Games to product to teaching",
-  "Now building across web and film",
-  "Based in Atlanta",
-  "Open to senior roles",
+  "Full-stack engineer and instructor",
+  "Bringing clarity to complex systems",
+  "In code, workflows, and teams",
+  "Building AI-native, end to end",
+  "Atlanta, Georgia",
 ];
 
 /*
@@ -20,25 +21,29 @@ const HEADLINE_SEGMENTS = [
 */
 export function Hero() {
   return (
-    <div className="flex flex-1 flex-col items-center px-6 py-8 sm:px-10 lg:px-16">
-      <header className="flex justify-center">
-        <Monogram />
-      </header>
+    <div className="relative flex flex-1 flex-col overflow-hidden">
+      <HeroBackground />
 
-      <div className="flex flex-1 flex-col items-center justify-center">
-        <p
-          className="text-utility mb-10 text-(--color-fg-muted) uppercase"
-          style={{ letterSpacing: "var(--tracking-utility)" }}
-        >
-          Portfolio
-        </p>
+      <div className="relative z-10 flex flex-1 flex-col items-center px-6 py-8 sm:px-10 lg:px-16">
+        <header className="flex justify-center">
+          <Monogram />
+        </header>
 
-        <KineticHeadline segments={HEADLINE_SEGMENTS} />
+        <div className="flex flex-1 flex-col items-center justify-center">
+          <p
+            className="text-utility mb-10 text-(--color-fg-muted) uppercase"
+            style={{ letterSpacing: "var(--tracking-utility)" }}
+          >
+            Portfolio
+          </p>
+
+          <KineticHeadline segments={HEADLINE_SEGMENTS} />
+        </div>
+
+        <footer className="flex justify-center pt-8">
+          <ScrollCue />
+        </footer>
       </div>
-
-      <footer className="flex justify-center pt-8">
-        <ScrollCue />
-      </footer>
     </div>
   );
 }

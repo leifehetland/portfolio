@@ -5,7 +5,8 @@ import { PageSection } from "@/components/PageSection/PageSection";
 import { Hero } from "@/components/Hero/Hero";
 import { ProjectIntro } from "@/components/Project/ProjectIntro";
 import { ProjectDetail } from "@/components/Project/ProjectDetail";
-import { Capabilities } from "@/components/Capabilities/Capabilities";
+import { About } from "@/components/About/About";
+import { Technologies } from "@/components/Technologies/Technologies";
 import { Colophon } from "@/components/Colophon/Colophon";
 import { SkipLink } from "@/components/SkipLink/SkipLink";
 
@@ -44,6 +45,14 @@ export default function Home() {
             <Hero />
           </PageSection>
 
+          <PageSection tone="ink" label="About">
+            <About />
+          </PageSection>
+
+          <PageSection tone="ink" label="Technologies">
+            <Technologies />
+          </PageSection>
+
           {projects.flatMap((project) => {
             const name = project.title.replace(/\n/g, " ");
             const lead = project.media.find((m) => m.type === "image");
@@ -79,9 +88,8 @@ export default function Home() {
             ];
           })}
 
-          <PageSection tone="ink" label="Capabilities and contact">
+          <PageSection tone="ink" label="Contact">
             <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-6 py-20 sm:px-10 lg:px-16">
-              <Capabilities />
               <Colophon />
             </div>
           </PageSection>
