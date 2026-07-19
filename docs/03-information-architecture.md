@@ -94,6 +94,11 @@ type Project = {
   stack: string[];        // ["TypeScript", "Next.js", "PostgreSQL"]
   body: string;           // MDX: the longer narrative on the white detail page
   media: MediaItem[];     // carousel sources (screens, recordings, diagrams)
+  beforeAfter?: {         // optional, for redesign studies like James Williams
+    before: MediaItem;
+    after: MediaItem;
+    caption?: string;
+  };
   links?: { label: string; href: string }[]; // live, repo, write-up
   recognitions?: string[]; // optional, the reference's awards slot becomes outcomes/metrics
 };
@@ -115,12 +120,20 @@ The real material is tiered in `docs/06-content-inventory.md`, which is the sour
 becomes a featured case study versus a credits-list entry, with showability and media status
 per item. Recommended featured sequence (Leif confirms order):
 
-1. Videodrome (current, owned, has a real data-migration story, showable)
-2. Bon House (current, owned, design-forward, on-brand for the aesthetic)
-3. Georgia Tech curriculum engineering (AI/LangChain/TS/CI-CD/TDD overhaul; reframes teaching
-   as building learning systems at scale, a senior signal)
-4. Horton Group reusable KeystoneJS/Angular client platform (architecting for reuse is senior)
-5. Punchy Fox and game-jam work (the origin beat; has demo footage; bridges into the lab)
+1. James Williams, LLC (current, owned, told as a before/after redesign, showable)
+2. Videodrome (current, owned, has a real data-migration story, showable)
+3. Bon House (current, owned, distinct collage aesthetic, live and growing)
+4. Higher-ed program engineering (Georgia Tech, plus the 2U/edX network reaching SMU, UPenn;
+   AI/LangChain/TS/CI-CD/TDD curriculum overhaul; learning systems at scale)
+5. Me: creative practice, film, games, and score (the maker throughline, consolidated; media-rich;
+   front door to the lab)
+6. Client work at scale: agency and freelance (40AU including the live 4Top sites, the Horton
+   reusable platform, and independent Squarespace builds; breadth and reliability)
+
+The James Williams study leads because a before/after is the most legible proof of value to any
+audience, and the after shows information architecture, content strategy, design, and build in a
+single artifact. It uses a dedicated before/after comparison (see `BeforeAfter` in
+`docs/04-components.md`).
 
 Deferred until refreshed: the three Nashville Software School capstones. The broad agency and
 client history (40AU, Fullscreen Direct brand work, NARUS, Squarespace builds, Global Mission
@@ -159,4 +172,12 @@ links. Leif's version:
 - Dynamic OG image per project (Next OG image generation) so shared case-study links look
   designed, not bare.
 - `sitemap.xml` and `robots.txt` generated at build.
-- JSON-LD `Person` schema on the home route (name, role, location, sameAs links).
+- JSON-LD `Person` schema on the home route. Concrete data (from Leif; confirm before ship):
+  - name: Leif E. Hetland
+  - jobTitle: Senior Full-Stack Software Engineer (creative technologist framing in copy, not schema)
+  - address locality: Atlanta, GA
+  - url: https://leifehetland.com
+  - email: lehetland1@gmail.com (decide whether to expose in schema or keep to a contact link)
+  - sameAs: https://linkedin.com/in/leifehetland, https://www.imdb.com/name/nm10714987/,
+    GitHub profile URL (still needed from Leif)
+- Canonical host (www vs apex) decided at launch; redirects from the other.

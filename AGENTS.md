@@ -28,6 +28,9 @@ moment, surface the conflict before acting.
 
 - **No copyrighted assets.** Never copy the reference site's images, video, fonts, brand
   marks, or client work into this project. Recreate the system; Leif supplies the content.
+- **No AI-generated images.** All imagery is real (Leif's screenshots, photography, film, game
+  footage, or original diagrams) or properly cleared and licensed. Never generate or place an
+  AI image. Per-card imagery and rights are in `docs/07-asset-manifest.md`.
 - **No em dashes.** Anywhere. Code comments, UI copy, docs, commit messages. Use commas,
   colons, or parentheses.
 - **Accessibility floor holds.** Every interactive element is keyboard reachable with a

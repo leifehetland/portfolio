@@ -20,11 +20,13 @@ with tokens applied at 360 / 768 / 1280.
 ## Milestone 1: the pager and one project, end to end
 
 - Build `Pager`, `PageSection`, `Reveal`.
-- Build `Hero` with `KineticHeadline` (MVP option B, kinetic type only) and `ScrollCue`,
+- Build `Hero` with `KineticHeadline` (MVP hero option C, kinetic type only) and `ScrollCue`,
   `Monogram`.
 - Build `ProjectIntro` and `ProjectDetail` plus their pieces (`DisplayNumber`, `DisplayTitle`,
-  `MetaList`, `EdgeMarker`, `MediaFrame`, `MediaCarousel`, `LinkRow`).
-- Wire one real project through the MDX content model, with real media.
+  `MetaList`, `EdgeMarker`, `MediaFrame`, `MediaCarousel`, `BeforeAfter`, `LinkRow`).
+- Wire one real project through the MDX content model, with real media. Use James Williams
+  (featured slot 1): its before/after assets are already in hand, and it exercises the
+  `BeforeAfter` component.
 - Build the `/work/[slug]` route reusing `ProjectDetail`.
 
 **Done when:** the home route shows hero plus one full project as a snapping vertical pager,

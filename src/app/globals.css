@@ -17,9 +17,10 @@
   --color-fg-on-paper: #141414;
   --color-fg-muted: #6b6b6b; /* captions, secondary metadata */
 
-  /* Monochrome chrome (reference is white on near-black, no accent). Kept as a
-     token for any single future signature moment; chrome uses currentColor. */
-  --color-accent: #ffffff;
+  /* Accent (docs/02): Leif's resume brand blue, the v2 working default so the
+     personal brand stays coherent across resume and site. Used sparingly: focus
+     states, links, and at most one signature moment. Veto window open until M3. */
+  --color-accent: #4273b1;
 
   /* Type families (bound to next/font CSS variables in layout.tsx).
      Techno + monospace: heavy grotesque titles, geometric numerals, mono body. */
@@ -73,10 +74,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Global visible focus ring on every interactive element. Uses currentColor so it
-   stays monochrome and visible on both ink and paper surfaces. */
+/* Global visible focus ring on every interactive element. Uses the accent token
+   (docs/04 shared concerns); #4273B1 clears 3:1 against both ink and paper. */
 :focus-visible {
-  outline: 2px solid currentColor;
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 2px;
 }

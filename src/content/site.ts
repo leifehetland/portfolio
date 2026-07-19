@@ -4,21 +4,26 @@
 */
 
 // Canonical origin for metadata, OG images, sitemap, and JSON-LD. Override via
-// NEXT_PUBLIC_SITE_URL in the environment. DRAFT default: confirm the exact domain
-// (leifhetland vs leifehetland) before launch.
+// NEXT_PUBLIC_SITE_URL in the environment. Domain decided (docs/08): leifehetland.com,
+// with the "e". Canonical host (www vs apex) is chosen at launch via the env var.
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://leifhetland.com"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://leifehetland.com"
 ).replace(/\/$/, "");
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/leifehetland";
 
 export const person = {
-  name: "Leif Hetland",
-  role: "Full-stack engineer",
+  // JSON-LD Person data per docs/03 (confirm before ship).
+  name: "Leif E. Hetland",
+  role: "Senior Full-Stack Software Engineer",
   locality: "Atlanta, Georgia",
+  // Exposed in JSON-LD for now; docs/08 leaves schema exposure as Leif's call.
   email: "lehetland1@gmail.com",
-  // Used as JSON-LD sameAs. GitHub still owed.
-  sameAs: [LINKEDIN_URL] as string[],
+  sameAs: [
+    LINKEDIN_URL,
+    "https://www.imdb.com/name/nm10714987/",
+    "https://github.com/leifehetland",
+  ] as string[],
   tagline:
     "Full-stack engineer and instructor who brings clarity to complex systems. TypeScript, JavaScript, and AI-native development.",
 };

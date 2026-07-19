@@ -54,7 +54,10 @@ Derived from the reference, expressed as a starting token set. Tune during build
 --fg-on-paper   #141414
 --fg-muted      #6B6B6B   /* captions, secondary metadata */
 --frame         #E8E8E8   /* the light rounded media-frame border */
---accent        TBD       /* pick ONE, derived from Leif's mark, used sparingly */
+--accent        #4273B1   /* working default: Leif's resume brand blue, so the personal
+                             brand is coherent across resume and site; used sparingly on
+                             focus states, links, and one signature moment; veto anytime
+                             before Milestone 3 */
 ```
 
 The reference is effectively monochrome with white type on black. If Leif wants an accent,

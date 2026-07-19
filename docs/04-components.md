@@ -77,8 +77,9 @@ Small rotated label on the page edge. Props: `text: string` (e.g. the year). Dec
 ### `ProjectDetail` (server)
 The white detail page for a project.
 - Props: `project: Project`.
-- Layout: `heading` title, two-column MDX `body`, `MediaCarousel`, then `MetaList` blocks for
-  context and outcomes, and a `LinkRow`.
+- Layout: `heading` title, two-column MDX `body`, then either a `BeforeAfter` (when
+  `project.beforeAfter` is set, as with James Williams) or a `MediaCarousel`, then `MetaList`
+  blocks for context and outcomes, and a `LinkRow`.
 
 ### `MediaFrame` (server)
 The rounded passe-partout frame around any media. Props: `children`.
@@ -93,6 +94,27 @@ Horizontal slideshow inside a `MediaFrame`.
 - Images via `next/image` with width/height to reserve space; videos muted, `playsInline`,
   lazy; embeds load on interaction (no autoplay of third-party iframes).
 - Reduced motion: cross-fade or instant change instead of slide.
+
+### `BeforeAfter` (client)
+The redesign comparison, the signature of the James Williams study. Renders inside a `MediaFrame`.
+- Props: `before: MediaItem`, `after: MediaItem`, `caption?: string`.
+- Default interaction: a draggable divider that wipes between the two images, with a labeled
+  "before" and "after" state. Pointer and touch draggable, and keyboard operable (arrow keys move
+  the divider, with a visible focus state on the handle).
+- Full-page-tall images (like the contractor site captures) should scale to fit the frame and be
+  openable to full size, so the divider compares the same crop of both.
+- Reduced motion and no-JS fallback: show the before and after stacked or side by side with clear
+  labels, no wipe. The comparison must be understandable without the drag interaction.
+- Uses `next/image` with correct dimensions to avoid layout shift.
+
+### `AudioSample` (client)
+An inline score-sample player, used in the creative case study (slot 5) for Leif's compositions.
+- Props: `src: string`, `title: string`, `duration?: string`.
+- Click to play, one sample at a time (playing a new one stops the current). Never autoplay.
+- Visible transport (play/pause, elapsed), keyboard operable, labeled for screen readers.
+- Small and quiet by default so it never fights the visuals. This is distinct from the optional
+  ambient hero score in `docs/03-information-architecture.md`; that is site chrome, this is a
+  content sample inside a case study.
 
 ### `LinkRow` (server)
 The live / repo / write-up links for a project. External links open in a new tab with

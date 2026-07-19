@@ -14,6 +14,14 @@ export type MediaItem =
 
 export type ProjectLink = { label: string; href: string };
 
+// Redesign studies (docs/03): a dedicated before/after comparison, rendered by
+// the BeforeAfter component in place of the carousel. Images only.
+export type BeforeAfterPair = {
+  before: Extract<MediaItem, { type: "image" }>;
+  after: Extract<MediaItem, { type: "image" }>;
+  caption?: string;
+};
+
 export type ProjectMeta = {
   slug: string; // url segment, e.g. "videodrome"
   index: number; // position in the selected-work sequence
@@ -24,6 +32,7 @@ export type ProjectMeta = {
   role: string[]; // metadata column
   stack: string[]; // tech
   media: MediaItem[]; // carousel sources
+  beforeAfter?: BeforeAfterPair; // redesign studies, e.g. James Williams
   links?: ProjectLink[]; // live, repo, write-up
   outcomes?: string[]; // reference "Recognitions" slot, reframed as outcomes/metrics
   context?: string[]; // reference "The Team" slot, reframed as collaborators/context
@@ -36,6 +45,9 @@ export type Project = ProjectMeta & {
 
 // Project modules. Each .mdx exports typed `meta` and a default Body component.
 // The selected-work order is driven by each project's `index` (sorted below).
+import JamesWilliamsBody, {
+  meta as jamesWilliamsMeta,
+} from "@/content/projects/james-williams.mdx";
 import VideodromeBody, {
   meta as videodromeMeta,
 } from "@/content/projects/videodrome.mdx";
@@ -45,19 +57,20 @@ import BonHouseBody, {
 import GeorgiaTechBody, {
   meta as georgiaTechMeta,
 } from "@/content/projects/georgia-tech.mdx";
-import HortonGroupBody, {
-  meta as hortonGroupMeta,
-} from "@/content/projects/horton-group.mdx";
-import PunchyFoxBody, {
-  meta as punchyFoxMeta,
-} from "@/content/projects/punchy-fox.mdx";
+import CreativePracticeBody, {
+  meta as creativePracticeMeta,
+} from "@/content/projects/creative-practice.mdx";
+import ClientWorkBody, {
+  meta as clientWorkMeta,
+} from "@/content/projects/client-work-at-scale.mdx";
 
 const modules: { meta: ProjectMeta; Body: ComponentType }[] = [
+  { meta: jamesWilliamsMeta, Body: JamesWilliamsBody },
   { meta: videodromeMeta, Body: VideodromeBody },
   { meta: bonHouseMeta, Body: BonHouseBody },
   { meta: georgiaTechMeta, Body: GeorgiaTechBody },
-  { meta: hortonGroupMeta, Body: HortonGroupBody },
-  { meta: punchyFoxMeta, Body: PunchyFoxBody },
+  { meta: creativePracticeMeta, Body: CreativePracticeBody },
+  { meta: clientWorkMeta, Body: ClientWorkBody },
 ];
 
 export const projects: Project[] = modules

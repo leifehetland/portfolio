@@ -1,6 +1,7 @@
 import type { ElementType } from "react";
 import type { Project } from "@/lib/projects";
 import { Reveal } from "@/components/Reveal/Reveal";
+import { BeforeAfter } from "./BeforeAfter";
 import { MediaCarousel } from "./MediaCarousel";
 import { MetaList } from "./MetaList";
 import { LinkRow } from "./LinkRow";
@@ -46,6 +47,17 @@ export function ProjectDetail({
             {project.summary}
           </p>
         </Reveal>
+
+        {project.beforeAfter && (
+          <Reveal delay={0.1}>
+            <div className="mx-auto mt-12 max-w-4xl">
+              <BeforeAfter
+                {...project.beforeAfter}
+                label={`${project.title.replace(/\n/g, " ")} before and after`}
+              />
+            </div>
+          </Reveal>
+        )}
 
         {project.media.length > 0 && (
           <Reveal delay={0.1}>

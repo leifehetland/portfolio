@@ -26,24 +26,27 @@ See `docs/01-architecture.md` for the full rationale.
 - Framer Motion (`motion`) for entrance and scroll-reveal animation
 - Native CSS scroll-snap for the full-screen pager; Lenis optional for smooth scroll
 - MDX for case-study content so projects are data, not hardcoded JSX
-- Deploy to Vercel; domain (leifhetland / leifehetland, confirm exact) via Vercel DNS
+- Deploy to Vercel; domain leifehetland.com (with an "e") via Vercel DNS, canonical host
+  (www vs apex) to confirm at launch
 
 Do not pin versions from memory. Before installing, check the current stable release
 of Next, Tailwind, and motion and use that. Note the resolved versions back into this
 file once installed.
 
-### Resolved versions (Milestone 0, 2026-06-17)
+### Resolved versions (Milestone 0, 2026-06-17; fonts revised 2026-06-24)
 
 - next 16.2.9 (App Router, Turbopack default, React Compiler available)
 - react / react-dom 19.2.4
-- tailwindcss 4.3.1 (CSS-first, tokens live in `@theme` in `globals.css`, no JS config)
+- tailwindcss 4.x (CSS-first, tokens live in `@theme` in `globals.css`, no JS config)
 - motion 12.40.x (import from `motion/react`)
 - typescript 5.9.x (strict), eslint 9 + eslint-config-next 16.2.9, prettier 3
+- MDX pipeline: @next/mdx + @mdx-js/loader + @mdx-js/react (projects are .mdx with a
+  typed `meta` export, registered in `src/lib/projects.ts`)
 - Fonts are self-hosted via `next/font/local`, not `next/font/google`: the OFL variable
-  woff2 builds of Fraunces (display) and Hanken Grotesk (body) are vendored under
-  `src/app/fonts/` with their license text. This avoids any build-time or runtime
-  dependency on a font CDN. Both font faces are a DRAFT choice pending sign-off.
-- MDX pipeline is deferred to Milestone 1, where the first real project consumes it.
+  woff2 builds of Archivo (display), Orbitron (numerals), and JetBrains Mono (body) are
+  vendored under `src/app/fonts/` with their license text. This avoids any build-time or
+  runtime dependency on a font CDN. The techno + monospace pairing is a DRAFT choice
+  pending sign-off.
 - Package manager: pnpm. `pnpm-workspace.yaml` allowlists sharp + unrs-resolver builds.
 
 ## Commands
@@ -85,6 +88,9 @@ Run `pnpm typecheck` and `pnpm lint` before declaring any task done.
 
 - Use Leif's own assets only. Do not reproduce the reference site's images, video, brand,
   or client work. We are copying a layout and interaction system, not media.
+- No AI-generated images anywhere. All imagery is real (Leif's screenshots, photography, film,
+  game footage, or original diagrams) or properly cleared and licensed. The per-card imagery
+  plan and rights notes live in `docs/07-asset-manifest.md`.
 - Real copy beats lorem ipsum. If copy is missing, write a tight first draft in Leif's
   voice (direct, no filler) and flag it as draft.
 
