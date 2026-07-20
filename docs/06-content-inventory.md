@@ -68,18 +68,25 @@ and creative rigor rather than side hobbies. Threads:
   (co-writer, cinematographer, composer, editor) and "Lights Among Us" (co-writer, 1st AD /
   set support, editor).
 - On-set craft: 1st AD and set support, PA, boom operator, camera operator, and grip across
-  shorts and a feature ("Content," grip, camera and electrical dept., 2019). Atlanta Film
-  Society PA Academy trained (2025).
+  shorts and a feature. IMDb-verified: on "Content" (2019) the credit is exactly "grip, Camera
+  and Electrical Department" (not Key Grip or Best Boy), so resume and case-study copy should say
+  precisely that. Atlanta Film Society PA Academy trained (2025).
 - Game dev: Punchy Fox (with Tyler Aldridge, demo footage and early prototypes) plus jam pieces
   "Is Anyone Out There?" (did well at its jam) and "La Bamba" (a Bomberman-style clone that
   reached a playable prototype).
 - Scoring and composition: original score and theme music for the "Holed Up" podcast series
-  (50 episodes, 2024 to 2025) plus scores for his own films.
+  (50 episodes, 2024 to 2025) plus scores for his own films. IMDb-verified dual credit worth
+  keeping distinct: Composer ("music by") and Music Department ("theme music composer, opening
+  theme"). Writing the opening theme is a separate, nameable contribution beyond scoring episodes.
 Media: film clips and stills, game footage, and short score audio samples (see the `AudioSample`
 component). This case study is the curated front door to the deeper `/lab` archive, which holds
 the full body of experimental music, digital art, and additional film work. Source for the
-credits is Leif's film resume; some details there are still placeholders (years, the feature
-grip title, education specialization), so confirm those before the copy ships.
+credits is Leif's film resume, cross-checked against his IMDb profile (nm9438326). On IMDb the
+site itself lists him as "Leif Hetland (II)," its own roman-numeral disambiguation from his
+father's entry, so every link and citation must point at that exact profile page, never a bare
+name search. Remaining resume placeholders to confirm before copy ships: years for The Traveller,
+Lights Among Us, and the GMA 20th Anniversary promo, plus the NSS specialization. The Content grip
+title and the Holed Up dates/episode count are now IMDb-verified and no longer open.
 
 **6. Client work at scale: agency and freelance** (mixed showability)
 Discipline: engineering + design. Angle: the breadth-and-reliability story, consolidated into one

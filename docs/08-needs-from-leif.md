@@ -47,8 +47,13 @@ Per-card, in sequence order:
 **5. Me: creative practice**
 - [ ] Pick the hero film clip or two, 2-3 game snippets, 2-3 score excerpts (20-40s)
 - [ ] Collaborator ok on shared films (co-writers, jam teammates, incl. Tyler)
-- [ ] Fill the film-resume placeholders: years for The Traveller, Lights Among Us, and the GMA
-      20th Anniversary promo; the exact grip title on Content; NSS specialization
+- [ ] Fill the remaining film-resume placeholders: years for The Traveller, Lights Among Us, and
+      the GMA 20th Anniversary promo; NSS specialization. (The Content grip title and the Holed Up
+      dates/episode count are now IMDb-verified and resolved.)
+- [ ] Pre-launch polish: get a headshot and, ideally, a short demo reel onto the IMDb profile
+      (nm9438326). The creative card links there, and right now it greets visitors with a blank
+      gray avatar under a bare credits list; a photo plus a 60-second reel turns that link from a
+      citation into an asset. Reel material already exists in the slot-5 media picks.
 - [ ] Punchy Fox demo footage and prototype clips
 
 **6. Client work at scale**

@@ -46,6 +46,27 @@ recorded in `CLAUDE.md` and `AGENTS.md` as a hard constraint.
   card with his own diagrams.
 - Do not publish proprietary curriculum content. Confirm with Leif whether any specific material
   is cleared to show; default to describing and diagramming.
+- Official brand sources (verified July 2026), if a small wordmark strip is still wanted. Note the
+  access reality per institution: three of the five gate downloads behind a login or written
+  permission, which is itself the signal that a text credit line is the stronger, lower-risk move.
+    - Georgia Tech: brand.gatech.edu/our-look/logos. Outside use requires review by Institute
+      Communications and a license; requests go to gtlicensing@gatech.edu (licensing.gatech.edu).
+      Downloads may need a GT login; Leif's instructor credentials might still open it.
+    - SMU: smu.edu/brand/logos, official files via Box. Policy prohibits the logo with any
+      organization not sponsored by the University; single-use/personal requests go to
+      Brand@SMU.edu. Email-first.
+    - UPenn: university-communications.upenn.edu/for-the-penn-community/brand-identity and
+      branding.web-resources.upenn.edu/logos-and-branding. Use authorized only for the University
+      community; the Office of the University Secretary guards the marks (ucomms-web@upenn.edu).
+    - edX: edx.org/media-kit, the most workable of the five (built for third parties). A trademark
+      license is generally required and any on-site logo use must carry a live link to edX;
+      permission via trademarks@edx.org.
+    - 2U: 2u.com/newsroom, media kit and contact media@2U.com. 2U is the parent, edX the primary
+      brand, so if the strip shows one platform mark it should be edX, with 2U named in the text.
+- Recommended default: a restrained credit line in the utility type, for example "Curriculum
+  delivered through the 2U/edX network at Georgia Tech, SMU, and the University of Pennsylvania,"
+  needs zero permission, cannot be revoked, and reads more senior than a logo wall on a personal
+  site. Leif's own curriculum-architecture diagram stays the hero image either way.
 
 **5. Me: creative practice (film, games, score)**
 - HAVE: film stills and clips from his own shorts, game footage (Punchy Fox and the jams), score
