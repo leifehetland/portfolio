@@ -65,33 +65,30 @@ export const meta = {
 
 ## The brief
 
-Videodrome is a physical video store in Atlanta with a catalog most streaming
-services cannot match: roughly thirty thousand titles, curated and organized by
-director and country rather than by algorithm. The job was to give that catalog a
-web presence worthy of the shelves, and to make the inventory behind it something
-the staff could actually run.
+Videodrome is an Atlanta video store with a catalog streaming cannot match: about
+thirty thousand titles, organized by director and country instead of by algorithm. The
+job was a web presence worthy of the shelves, and an inventory the staff could actually
+run.
 
 ## The hard part
 
-The existing data lived in a legacy Clarion desktop database: a closed, decades-old
-system that was never meant to talk to the web. The real work was not the storefront,
-it was getting thirty thousand records out of that system without losing the
-hand-built organization that makes the store what it is, then modeling them in
-PostgreSQL in a way that supports search by title, director, and country, plus live
-rental availability.
+The data lived in a legacy Clarion desktop database, a closed decades-old system never
+meant to touch the web. The real work was not the storefront. It was getting thirty
+thousand records out without losing the hand-built organization that makes the store
+what it is, then modeling them in PostgreSQL to support search by title, director, and
+country plus live rental availability.
 
 ## The build
 
-The front end is a TypeScript and Next.js storefront over that Postgres catalog: a
-fast search, filters for availability and genre, and film cards that show poster,
-director, year, and how many copies are left. The same data model feeds the
-point-of-sale and inventory side, so what a customer sees online and what the staff
-sees at the counter come from one source of truth rather than two systems drifting
-apart. The look is deliberately editorial and dark, built on a small design system
-so new sections stay consistent as the catalog grows.
+The front end is a TypeScript and Next.js storefront over that Postgres catalog: fast
+search, filters for availability and genre, and film cards showing poster, director,
+year, and copies left. The same data model feeds point-of-sale and inventory, so the
+counter and the website read from one source of truth instead of two systems drifting
+apart. The look is editorial and dark, on a small design system that keeps new sections
+consistent as the catalog grows.
 
 ## Where it stands
 
-The design and data model are built and the rebuild is in development, not yet live
-on the store's domain. The screens here are from the working design. Next up is
-finishing the migration tooling and the staff-facing inventory views before launch.
+The design and data model are built; the rebuild is in development, not yet live on the
+store's domain. The screens here are from the working design. Next is the migration
+tooling and the staff-facing inventory views.

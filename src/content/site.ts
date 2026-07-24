@@ -21,7 +21,7 @@ export const person = {
   email: "lehetland1@gmail.com",
   sameAs: [
     LINKEDIN_URL,
-    "https://www.imdb.com/name/nm10714987/",
+    "https://www.imdb.com/name/nm9438326/",
     "https://github.com/leifehetland",
   ] as string[],
   tagline:
