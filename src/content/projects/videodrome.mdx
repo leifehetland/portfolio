@@ -52,7 +52,7 @@ export const meta = {
   ],
   context: [
     "Client: Videodrome, Atlanta",
-    "1023 N Highland Ave NE",
+    "617 N Highland Ave NE",
     "Independent engagement",
   ],
   outcomes: [
@@ -66,24 +66,24 @@ export const meta = {
 ## The brief
 
 Videodrome is an Atlanta video store with a catalog streaming cannot match: about
-thirty thousand titles, organized by director and country instead of by algorithm. The
-job was a web presence worthy of the shelves, and an inventory the staff could actually
+thirty thousand titles, shelved by director and country instead of by algorithm. The
+job was a web presence worthy of the shelves and an inventory the staff could actually
 run.
 
 ## The hard part
 
 The data lived in a legacy Clarion desktop database, a closed decades-old system never
-meant to touch the web. The real work was not the storefront. It was getting thirty
-thousand records out without losing the hand-built organization that makes the store
-what it is, then modeling them in PostgreSQL to support search by title, director, and
-country plus live rental availability.
+meant to touch the web. The storefront was the easy part. The real work was getting
+thirty thousand records out without losing the hand-built organization that makes the
+store what it is, then modeling them in PostgreSQL to support search by title, director,
+and country, plus live rental availability.
 
 ## The build
 
 The front end is a TypeScript and Next.js storefront over that Postgres catalog: fast
 search, filters for availability and genre, and film cards showing poster, director,
-year, and copies left. The same data model feeds point-of-sale and inventory, so the
-counter and the website read from one source of truth instead of two systems drifting
+year, and copies left. One data model feeds both the site and the point-of-sale, so the
+counter and the web read from a single source of truth instead of two systems drifting
 apart. The look is editorial and dark, on a small design system that keeps new sections
 consistent as the catalog grows.
 

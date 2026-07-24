@@ -28,12 +28,12 @@ export const person = {
     "Full-stack engineer and instructor who brings clarity to complex systems. TypeScript, JavaScript, and AI-native development.",
 };
 
-// About Me, in Leif's own voice (adapted from his LinkedIn). Each entry is one
-// paragraph. Warm, first person, AI woven in rather than sloganized.
+// About Me, third person, adapted from Leif's own pass (kept close to his wording).
+// Each entry is one paragraph. Warm, plain, AI woven in rather than sloganized.
 export const about: string[] = [
-  "I'm a full-stack engineer and instructor, and what I really enjoy is bringing clarity to complex systems, whether that's in the code, a workflow, or how a team works together. I've spent the better part of seven years building and shipping web apps across the whole stack, React and TypeScript up front, Node, PostgreSQL, and GraphQL behind them.",
-  "Teaching changed how I work. When you've explained the hard parts to hundreds of people, you get good at breaking down complexity, saying things plainly, and helping someone move from uncertainty to confidence. These days a lot of that is AI-native: I build, debug, and review with Claude, GPT, and LangChain in the loop, not as a gimmick but as part of how the work actually gets done.",
-  "I'm happiest at the point where the technology meets something real, figuring out how the pieces fit, finding where they break, and making them steadier and easier to use. If you're working on something genuinely hard and want someone who can both build it and explain it, I'd like to hear about it.",
+  "Leif Hetland is a full-stack engineer and instructor who enjoys bringing clarity to complex systems, whether that's in code, a workflow, or how a team works together. He has spent more than ten years building and shipping web apps across the whole stack, React with TypeScript in the front end, Node, PostgreSQL, and GraphQL in the back end.",
+  "Teaching had a significant impact on how he works and interfaces with peers. When challenging concepts are presented to hundreds of people from all walks of life and backgrounds, one gets good at breaking down complexity, saying things plainly, and helping someone move from uncertainty to confidence. These days a lot of that is AI-native: building, debugging, and reviewing with Claude, GPT, and LangChain in the loop. He is comfortable as the \"human in the loop.\"",
+  "Leif is happiest at the intersection of technology and something real, figuring out how the pieces fit, finding where they break, and making them more stable and user friendly. If you're working on something exciting or challenging and want someone who can both build it and explain it, please reach out.",
 ];
 
 export type TechGroup = { label: string; items: string[] };
@@ -93,4 +93,4 @@ export const buildCredit =
   "Built with Next.js, TypeScript, and Tailwind. Type set in Archivo, Orbitron, and JetBrains Mono.";
 
 export const closingLine =
-  "If you're working on something hard and want someone who can build it and explain it, I'd like to hear about it.";
+  "If you're working on something exciting or challenging and want someone who can both build it and explain it, please reach out.";
