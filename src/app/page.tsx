@@ -7,6 +7,7 @@ import { ProjectIntro } from "@/components/Project/ProjectIntro";
 import { ProjectDetail } from "@/components/Project/ProjectDetail";
 import { About } from "@/components/About/About";
 import { Technologies } from "@/components/Technologies/Technologies";
+import { TechBackground } from "@/components/Technologies/TechBackground";
 import { Colophon } from "@/components/Colophon/Colophon";
 import { SkipLink } from "@/components/SkipLink/SkipLink";
 
@@ -50,16 +51,22 @@ export default function Home() {
           </PageSection>
 
           <PageSection tone="ink" label="Technologies">
+            <TechBackground />
             <Technologies />
           </PageSection>
 
           {projects.flatMap((project) => {
             const name = project.title.replace(/\n/g, " ");
             const lead = project.media.find((m) => m.type === "image");
-            const bg =
+            // Redesign studies have no media carousel, so fall back to the
+            // before/after "after" capture for the emerging intro background.
+            const bgSource =
               lead && lead.type === "image"
-                ? { src: lead.src, alt: lead.alt }
-                : null;
+                ? lead
+                : (project.beforeAfter?.after ?? null);
+            const bg = bgSource
+              ? { src: bgSource.src, alt: bgSource.alt }
+              : null;
             return [
               <PageSection
                 key={`${project.slug}-intro`}

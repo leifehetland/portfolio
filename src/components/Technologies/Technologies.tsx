@@ -8,7 +8,7 @@ import { MetaList } from "@/components/Project/MetaList";
 */
 export function Technologies() {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-6 py-20 sm:px-10 lg:px-16">
+    <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-6 py-20 sm:px-10 lg:px-16">
       <Reveal>
         <p
           className="text-utility text-(--color-fg-muted) uppercase"
