@@ -58,12 +58,14 @@ export default function Home() {
           {projects.flatMap((project) => {
             const name = project.title.replace(/\n/g, " ");
             const lead = project.media.find((m) => m.type === "image");
-            // Redesign studies have no media carousel, so fall back to the
-            // before/after "after" capture for the emerging intro background.
+            // The dark intro backdrop: an explicit `background` wins, else the
+            // lead media image, else a redesign study's "after" capture. Kept
+            // separate from the white detail carousel, which reads `media` only.
             const bgSource =
-              lead && lead.type === "image"
-                ? lead
-                : (project.beforeAfter?.after ?? null);
+              project.background ??
+              (lead && lead.type === "image" ? lead : null) ??
+              project.beforeAfter?.after ??
+              null;
             const bg = bgSource
               ? { src: bgSource.src, alt: bgSource.alt }
               : null;

@@ -29,14 +29,20 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     strong: ({ children }) => (
       <strong className="font-semibold">{children}</strong>
     ),
-    a: ({ href, children }) => (
-      <a
-        href={href}
-        className="text-(--color-fg-on-paper) underline decoration-current decoration-2 underline-offset-4"
-      >
-        {children}
-      </a>
-    ),
+    a: ({ href, children }) => {
+      const external = typeof href === "string" && /^https?:\/\//.test(href);
+      return (
+        <a
+          href={href}
+          {...(external
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+          className="text-(--color-fg-on-paper) underline decoration-current decoration-2 underline-offset-4"
+        >
+          {children}
+        </a>
+      );
+    },
     ...components,
   };
 }

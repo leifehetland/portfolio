@@ -31,7 +31,8 @@ export type ProjectMeta = {
   summary: string; // one or two sentences, dark intro page
   role: string[]; // metadata column
   stack: string[]; // tech
-  media: MediaItem[]; // carousel sources
+  media: MediaItem[]; // carousel sources (shown in the white detail page)
+  background?: Extract<MediaItem, { type: "image" }>; // dark intro backdrop only, not shown in the white carousel
   beforeAfter?: BeforeAfterPair; // redesign studies, e.g. James Williams
   links?: ProjectLink[]; // live, repo, write-up
   outcomes?: string[]; // reference "Recognitions" slot, reframed as outcomes/metrics
