@@ -72,7 +72,7 @@ and creative rigor rather than side hobbies. Threads:
   and Electrical Department" (not Key Grip or Best Boy), so resume and case-study copy should say
   precisely that. Atlanta Film Society PA Academy trained (2025).
 - Game dev: Punchy Fox (with Tyler Aldridge, demo footage and early prototypes) plus jam pieces
-  "Is Anyone Out There?" (did well at its jam) and "La Bamba" (a Bomberman-style clone that
+  "Is Anyone Out There?" (did well at its jam) and "La Bomba" (a Bomberman-style clone that
   reached a playable prototype).
 - Scoring and composition: original score and theme music for the "Holed Up" podcast series
   (50 episodes, 2024 to 2025) plus scores for his own films. IMDb-verified dual credit worth
