@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Image from "next/image";
 import { useReducedMotion } from "motion/react";
 
@@ -11,21 +11,22 @@ import { useReducedMotion } from "motion/react";
   wider-than-mobile viewports, so small screens and reduced-motion users never
   download it (keeps the performance and accessibility floor).
 */
+function useMediaQuery(query: string): boolean {
+  return useSyncExternalStore(
+    (onChange) => {
+      const mq = window.matchMedia(query);
+      mq.addEventListener("change", onChange);
+      return () => mq.removeEventListener("change", onChange);
+    },
+    () => window.matchMedia(query).matches,
+    () => false,
+  );
+}
+
 export function TechBackground() {
   const reduced = useReducedMotion() ?? false;
-  const [showVideo, setShowVideo] = useState(false);
-
-  useEffect(() => {
-    if (reduced) {
-      setShowVideo(false);
-      return;
-    }
-    const mq = window.matchMedia("(min-width: 768px)");
-    const update = () => setShowVideo(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, [reduced]);
+  const wide = useMediaQuery("(min-width: 768px)");
+  const showVideo = !reduced && wide;
 
   return (
     <div

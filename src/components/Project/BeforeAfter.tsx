@@ -23,7 +23,7 @@ type BeforeAfterProps = BeforeAfterPair & {
 function Chip({ children }: { children: React.ReactNode }) {
   return (
     <span
-      className="text-utility bg-(--color-ink)/70 rounded-full px-3 py-1 text-(--color-fg-on-ink) uppercase"
+      className="text-utility rounded-full bg-(--color-ink)/70 px-3 py-1 text-(--color-fg-on-ink) uppercase"
       style={{ letterSpacing: "var(--tracking-utility)" }}
     >
       {children}
@@ -31,7 +31,10 @@ function Chip({ children }: { children: React.ReactNode }) {
   );
 }
 
-function FullSizeLinks({ before, after }: Pick<BeforeAfterPair, "before" | "after">) {
+function FullSizeLinks({
+  before,
+  after,
+}: Pick<BeforeAfterPair, "before" | "after">) {
   return (
     <p className="text-utility mt-3 text-(--color-fg-muted)">
       Open full size:{" "}
