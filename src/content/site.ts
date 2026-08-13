@@ -31,9 +31,9 @@ export const person = {
 // About Me, third person, adapted from Leif's own pass (kept close to his wording).
 // Each entry is one paragraph. Warm, plain, AI woven in rather than sloganized.
 export const about: string[] = [
-  "Leif Hetland is a full-stack engineer and instructor who enjoys bringing clarity to complex systems, whether that's in code, a workflow, or how a team works together. He has spent more than ten years building and shipping web apps across the whole stack, React with TypeScript in the front end, Node, PostgreSQL, and GraphQL in the back end.",
-  'Teaching had a significant impact on how he works and interfaces with peers. When challenging concepts are presented to hundreds of people from all walks of life and backgrounds, one gets good at breaking down complexity, saying things plainly, and helping someone move from uncertainty to confidence. These days a lot of that is AI-native: building, debugging, and reviewing with Claude, GPT, and LangChain in the loop. He is comfortable as the "human in the loop."',
-  "Leif is happiest at the intersection of technology and something real, figuring out how the pieces fit, finding where they break, and making them more stable and user friendly. If you're working on something exciting or challenging and want someone who can both build it and explain it, please reach out.",
+  "Leif Hetland is a full-stack engineer and instructor who likes untangling complicated systems, whether that's in code, a workflow, or how a team works together. He has spent more than ten years building and shipping web apps across the whole stack, React with TypeScript in the front end, Node, PostgreSQL, and GraphQL in the back end.",
+  'Teaching shaped how he works and how he explains things. Presenting hard concepts to hundreds of students, from every background, taught him to break down complexity, say things plainly, and help someone move from uncertainty to confidence. These days a lot of that is AI-native: building, debugging, and reviewing with Claude, GPT, and LangChain in the loop. He is comfortable as the "human in the loop."',
+  "Leif is happiest at the intersection of technology and something real, figuring out how the pieces fit, finding where they break, and making them more stable and user friendly.",
 ];
 
 export type TechGroup = { label: string; items: string[] };
